@@ -1,0 +1,38 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore Node.js and NPM directories
+node_modules/
+npm-debug.log
+
+# Ignore build and bundled files
+/build
+/dist
+*.log
+
+# Ignore user-specific files and directories
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# Ignore editor and IDE files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swn
+.swo
+
+# Ignore dependency directories and files (optional)
+# If you want to keep your dependencies under version control, remove the following lines
+# For Yarn:
+# /yarn-error.log
+
+# For NPM:
+# /package-lock.json
