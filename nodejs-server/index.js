@@ -9,9 +9,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const uploadManager = new ImageUploadManager(path.join(__dirname, 'uploads'), 'http://localhost:3000');
+const uploadManager = new ImageUploadManager(path.join(__dirname, 'uploads'), 'http://localhost:4000');
 
 app.post('/upload', uploadManager.upload.single('image'), (req, res) => {
+  console.log(req.file)
+  console.log(req)
+  console.log(req.file)
   try {
     if (req.file instanceof Error) {
       console.error('File upload error:', req.file);
@@ -36,6 +39,6 @@ app.get('/uploads/*', (req, res) => {
 
  
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(4000, () => {
+  console.log('Server is running on port 5009');
 });

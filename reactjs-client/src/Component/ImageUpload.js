@@ -5,6 +5,7 @@ import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 import { registerPlugin } from 'react-filepond';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 
+
 registerPlugin(FilePondPluginImagePreview);
 
 const ImageUpload = () => {
@@ -22,9 +23,9 @@ const ImageUpload = () => {
     if (file) {
       try {
         const formData = new FormData();
-        formData.append('image', file);
+        formData.append('image', file); //
 
-        const response = await fetch('http://localhost:3000/upload', {
+        const response = await fetch('http://localhost:5009/api_blog/uploads', {
           method: 'POST',
           body: formData,
         });
